@@ -36,7 +36,7 @@ class PostController extends Controller
             'user_id' => auth::user()->id,
             'subject' => $request->subject,
             'post' => $request->post,
-            'status' => (is_null($request->status) ? 0 : 1)
+            'status' => ($request->status == "on" ? 1 : 0)
         ]);
         return redirect()->route('post.index')->with('message', 'Post Successfully Saved!');
     }
@@ -66,7 +66,7 @@ class PostController extends Controller
             'user_id' => auth::user()->id,
             'subject' => $request->subject,
             'post' => $request->post,
-            'status' => (is_null($request->status) ? 0 : 1)
+            'status' => ($request->status == "on" ? 1 : 0)
         ]);
         return redirect()->route('post.index')->with('message', 'Post Successfully Saved!');
     }

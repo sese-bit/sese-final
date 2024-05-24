@@ -53,7 +53,7 @@
                                         <tr>
                                             <td>{{$post -> subject}}</td>
                                             <td>{{$post -> post}}</td>
-                                            <td>{{$post -> status}}</td>
+                                            <td>{{($post->status == 1 ? 'Published' : 'Unpublished' )}}</td>
                                             <td>
                                                 <a href="{{ route('post.show', $post) }}" class="btn btn-dark m-1"><i class="bi bi-folder-symlink"></i></a>
                                                 <a href="{{ route('post.edit', $post) }}" class="btn btn-success m-1"><i class="bi bi-pencil-square"></i></a>
