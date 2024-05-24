@@ -20,6 +20,7 @@ class Post extends Model
         'post',
         'status',
     ];
+    
 
     public function user() {
         return $this->belongsTo(User::class);
