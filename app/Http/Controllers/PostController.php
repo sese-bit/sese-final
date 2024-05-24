@@ -6,8 +6,8 @@ use App\Models\Post;
 use App\Http\Requests\StorePostRequest;
 use App\Http\Requests\UpdatePostRequest;
 use Illuminate\Support\Facades\Auth;
+// use App\Http\Resources\PostResource;
 
-use function PHPUnit\Framework\is_null;
 
 class PostController extends Controller
 {
