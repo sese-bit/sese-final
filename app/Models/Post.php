@@ -20,4 +20,5 @@ class Post extends Model
         'post',
         'status',
     ];
+    
 }
