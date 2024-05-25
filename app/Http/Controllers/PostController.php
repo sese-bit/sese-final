@@ -81,8 +81,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        $this->authorize('view', $post);
-        $post->delete();
+        $post->delete($post->id);
         return redirect()->route('post.index')->with('message', 'Post Successfully Deleted!');
     }
     
