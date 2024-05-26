@@ -4,8 +4,8 @@
             <img src="assets/img/logo.png" alt="" />
             <span class="d-none d-lg-block">Laravel Lesson</span>
         </a>
-        @auth
-        <i class="bi bi-list toggle-sidebar-btn"></i>
+        @auth  
+            <i class="bi bi-list toggle-sidebar-btn"></i>
         @endauth
     </div>
     <!-- End Logo -->

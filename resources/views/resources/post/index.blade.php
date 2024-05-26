@@ -52,14 +52,26 @@
                                     @foreach($posts as $post)
                                         <tr>
                                             <td>{{$post->subject}}</td>
-                                            <td>{{$post->post}}</td>
+                                            <td><div class="mb-2">{{$post->post}}</div>
+                                                <div class="alert alert-info alert-dismissible fade show" role="alert">
+                                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                                </div>
+                                                <div class="alert alert-info">
+                                                    <button type="button" class="btn-close"></button>
+                                                </div>
+                                            </td>
                                             <td>{{($post->status == 1 ? 'Published' : 'Unpublished')}}</td>
                                             <td>
                                                 <a href="{{ route('post.show', $post) }}" class="btn btn-dark m-1"><i class="bi bi-folder-symlink"></i></a>
                                                 <a href="{{ route('post.edit', $post) }}" class="btn btn-success m-1"><i class="bi bi-pencil-square"></i></a>
                                                 <button data-bs-toggle="modal" data-bs-target="#deleteModal{{ $post->id }}" class="btn btn-danger m-1"><i class="bi bi-trash2-fill"></i></button>                   
-                                            </td>                
+                                            </td>    
+                                              
                                         </tr>
+                                        <td colspan="4">
+                                                <b><small>Comments</small></b>
+                                                
+                                            </td>
                                         <!-- Delete Modal -->
                                         <div class="modal fade" id="deleteModal{{ $post->id }}" tabindex="-1" aria-labelledby="deleteModalLabel{{ $post->id }}" aria-hidden="true">
                                             <div class="modal-dialog">

@@ -26,6 +26,7 @@ Route::middleware('auth', 'verified')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/postpage', [PostController::class, 'postIndex'])->name('post.postIndex');
 
     // Route::get('/post', [PostController::class, 'index'])->name('post.index');
     // Route::get('/post/create', [PostController::class, 'create'])->name('post.create');

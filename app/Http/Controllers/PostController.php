@@ -87,6 +87,7 @@ class PostController extends Controller
     
     public function postIndex() {
         $posts = Post::where('status', 1)->get();
-        return view('pages.index', ['posts' => $posts]);
+        $ico = true;
+        return view('pages.index', ['posts' => $posts, 'ico' => $ico]);
     }
 }
